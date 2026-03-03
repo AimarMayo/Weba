@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Erreala</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .carousel-item img{
+        height: 260px;
+        object-fit: cover;
+      }
+      @media (min-width: 1200px){
+        .carousel-item img{
+          height: 700px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-xl bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand" href="#">Erreala</a>
+
+        <button class="navbar-toggler" type="button"
+          data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Hasiera</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Jokalariak</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Futbol zelaiak</a></li>
+            <li class="nav-item"><a class="nav-link disabled" aria-disabled="true">Sarrerak</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container my-3">
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://estaticosgn-cdn.deia.eus/clip/b7536fa6-cd83-40ff-ac2a-f4e924637ce6_16-9-aspect-ratio_default_0.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://www.azkoitia.eus/media/acfgallery/content/12436/13/whatsapp_image_2024-12-09_at_21.17.02_1.jpeg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://s3.ppllstatics.com/diariovasco/www/multimedia/2025/02/26/1493036183.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="container my-4">
+      <div class="row g-3">
+        <div class="col-12 col-xl-6">
+          <div class="card h-100">
+            <img src="https://www.viniloscasa.com/28220-thickbox/vinilos-futbol-real-sociedad-escudo.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Erreala</h5>
+              <p class="card-text">
+                Real Sociedad de Fútbol Sociedad Anonima Deportiva —euskaraz, Reala eta Erreala izenez ezaguna— Donostiako eta Gipuzkoako futbol klub nagusia da. Zubietako kirol-instalakuntzetan entrenatu ohi da, eta Anoeta estadioan jokatzen ditu etxeko partidak.
+              </p>
+              <a href="https://www.realsociedad.eus/" class="btn btn-primary">Web orrialdea</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-xl-6">
+          <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Errealaren tituluak
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Tituluak</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Gizonezkoen lehen taldea:
+            2× LaLiga (1980-81, 1981-82),
+            3× Copa del Rey (1909*, 1986-87, 2019-20),
+            1× Espainiako Superkopa (1982) eta
+            3× Segunda División (1948-49, 1966-67, 2009-10).
+            <br><br>
+            Emakumezkoen taldea:
+            1× Copa de la Reina (2018-19).
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Itxi</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

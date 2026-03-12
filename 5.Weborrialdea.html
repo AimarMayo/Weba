@@ -4,15 +4,35 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Erreala</title>
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
-      .carousel-item img{
+      /* Estilos generales */
+      body {
+        font-family: 'Montserrat', sans-serif;
+        background-color: #f4f6f9;
+      }
+
+      /* Colores Txuri-Urdin para los botones */
+      .btn-primary {
+        background-color: #0057b7;
+        border-color: #0057b7;
+      }
+      .btn-primary:hover {
+        background-color: #003f8a;
+        border-color: #003f8a;
+      }
+
+      /* Altura del carrusel */
+      .carousel-item img {
         height: 260px;
         object-fit: cover;
       }
       @media (min-width: 1200px){
-        .carousel-item img{
+        .carousel-item img {
           height: 700px;
         }
       }
@@ -20,9 +40,9 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-xl bg-body-tertiary">
+    <nav class="navbar navbar-expand-xl navbar-dark shadow-sm" style="background-color: #0057b7;">
       <div class="container">
-        <a class="navbar-brand" href="https://es.wikipedia.org/wiki/Real_Sociedad_de_F%C3%BAtbol">Erreala</a>
+        <a class="navbar-brand fw-bold" href="https://es.wikipedia.org/wiki/Real_Sociedad_de_F%C3%BAtbol">Erreala</a>
 
         <button class="navbar-toggler" type="button"
           data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -40,8 +60,8 @@
       </div>
     </nav>
 
-    <div class="container my-3">
-      <div id="carouselExample" class="carousel slide">
+    <div class="container my-4">
+      <div id="carouselExample" class="carousel slide shadow-lg rounded-4 overflow-hidden">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="https://estaticosgn-cdn.deia.eus/clip/b7536fa6-cd83-40ff-ac2a-f4e924637ce6_16-9-aspect-ratio_default_0.jpg" class="d-block w-100" alt="...">
@@ -65,48 +85,57 @@
       </div>
     </div>
 
-    <div class="container my-4">
-      <div class="row g-3">
+    <div class="container my-5">
+      <div class="row g-4">
         <div class="col-12 col-xl-6">
-          <div class="card h-100">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
             <img src="https://www.viniloscasa.com/28220-thickbox/vinilos-futbol-real-sociedad-escudo.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Erreala</h5>
-              <p class="card-text">
+            <div class="card-body p-4">
+              <h5 class="card-title fw-bold">Erreala</h5>
+              <p class="card-text text-muted" style="line-height: 1.7;">
                 Real Sociedad de Fútbol Sociedad Anonima Deportiva —euskaraz, Reala eta Erreala izenez ezaguna— Donostiako eta Gipuzkoako futbol klub nagusia da. Zubietako kirol-instalakuntzetan entrenatu ohi da, eta Anoeta estadioan jokatzen ditu etxeko partidak.
               </p>
-              <a href="https://www.realsociedad.eus/" class="btn btn-primary">Web orrialdea</a>
+              <a href="https://www.realsociedad.eus/" class="btn btn-primary rounded-pill px-4 mt-2">Web orrialdea</a>
             </div>
           </div>
         </div>
 
-        <div class="col-12 col-xl-6">
-          <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Errealaren tituluak
-          </button>
+        <div class="col-12 col-xl-6 d-flex flex-column justify-content-center align-items-center">
+          <div class="p-5 text-center bg-white shadow-sm rounded-4 w-100 h-100 d-flex flex-column justify-content-center">
+            <h4 class="mb-4 text-secondary fw-bold">Errealaren Tituluak</h4>
+            <p class="text-muted mb-4">Ikusi Errealaren titulu guztiak</p>
+            <div>
+              <button type="button" class="btn btn-primary btn-lg rounded-pill px-4 shadow" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                🏆 Ikusi
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Tituluak</h1>
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-4 border-0 shadow-lg">
+          <div class="modal-header border-0 pb-0">
+            <h1 class="modal-title fs-4 fw-bold text-primary" id="exampleModalLabel">Tituluak</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body">
-            Gizonezkoen lehen taldea:
-            2× LaLiga (1980-81, 1981-82),
-            3× Copa del Rey (1909*, 1986-87, 2019-20),
-            1× Espainiako Superkopa (1982) eta
-            3× Segunda División (1948-49, 1966-67, 2009-10).
-            <br><br>
-            Emakumezkoen taldea:
-            1× Copa de la Reina (2018-19).
+          <div class="modal-body text-secondary" style="line-height: 1.8;">
+            <p>
+              <strong class="text-dark">Gizonezkoen lehen taldea:</strong><br>
+              2× LaLiga (1980-81, 1981-82)<br>
+              3× Copa del Rey (1909*, 1986-87, 2019-20)<br>
+              1× Espainiako Superkopa (1982)<br>
+              3× Segunda División (1948-49, 1966-67, 2009-10)
+            </p>
+            <p class="mb-0">
+              <strong class="text-dark">Emakumezkoen taldea:</strong><br>
+              1× Copa de la Reina (2018-19)
+            </p>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Itxi</button>
+          <div class="modal-footer border-0 pt-0">
+            <button type="button" class="btn btn-secondary rounded-pill px-4" data-bs-dismiss="modal">Itxi</button>
           </div>
         </div>
       </div>
